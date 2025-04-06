@@ -66,13 +66,13 @@ function WeatherData() {
     } else {
       (options.yAxis = {
         type: "category",
-        data: weatherData.times.reverse().map((time) =>
+        data: weatherData.times.map((time) =>
           new Date(time).toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
           })
         ),
-        // inverse: true,
+        inverse: true,
         name: "hour",
       }),
         (options.xAxis = {
